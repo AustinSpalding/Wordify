@@ -10,9 +10,9 @@ def main(args):
 		task = input()
 	else:
 		task = args[1]
-	if task == 'n':
+	if task == 'w':
 		print(number_to_words())
-	elif task == 'w':
+	elif task == 'n':
 		print(words_to_number())
 	elif task == 'a':
 		print(all_wordifications())

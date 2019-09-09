@@ -4,7 +4,7 @@ from keypad_map import *
 def words_to_number():
 	print("Please input a wordified telephone number to convert")
 	word = input()
-	word.replace('-','')
+	word = word.replace('-','')
 	if not word.isalnum():
 		return "Input contains non-alphanumeric digits"
 	word = word.upper()

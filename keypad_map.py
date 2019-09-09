@@ -1,5 +1,6 @@
 # Dictionary mapping Letter->Number and Number->LetterSet
 keypad_map = {
+	'1': '1',
 	'2': 'ABC',
 	'3': 'DEF',
 	'4': 'GHI',
@@ -8,6 +9,7 @@ keypad_map = {
 	'7': 'PQRS',
 	'8': 'TUV',
 	'9': 'WXYZ',
+	'0': '0',
 	'A': '2',
 	'B': '2',
 	'C': '2',

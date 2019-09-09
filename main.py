@@ -10,12 +10,13 @@ def main(args):
 		task = input()
 	else:
 		task = args[1]
+	number = args[2] if len(args) > 2 else None
 	if task == 'w':
-		print(number_to_words())
+		print(number_to_words(number))
 	elif task == 'n':
-		print(words_to_number())
+		print(words_to_number(number))
 	elif task == 'a':
-		print(all_wordifications())
+		print(all_wordifications(number))
 	else:
 		print("Invalid argument")
 

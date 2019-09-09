@@ -5,9 +5,10 @@ import itertools
 # A helper function to create wordified numbers
 # Trims the prefix of a number and wordifies the remaining seven digits
 # Returns the first valid wordification if all_words is False, otherwise returns all wordifications found
-def wordify(all_words=False):
-	print("Please input a telephone number to wordify")
-	number = input()
+def wordify(all_words=False, number=None):
+	if not number:
+		print("Please input a telephone number to wordify")
+		number = input()
 	number = number.replace('-','')
 	prefix, suffix = number[:4], number[4:]
 	word_arr = []

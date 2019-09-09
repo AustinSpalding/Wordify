@@ -9,6 +9,8 @@ def words_to_number(word=None):
 	word = word.replace('-','')
 	if not word.isalnum():
 		return "Input contains non-alphanumeric digits"
+	while len(word) < 11:
+		word = '0' + word
 	word = word.upper()
 	number = ""
 	number = [number + char if char.isdigit() else number + keypad_map[char] for char in word]

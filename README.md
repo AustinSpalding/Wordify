@@ -13,6 +13,6 @@ Running `python main.py <task> <number>`, where <task> is `n`, `w`, or `a` conve
 
 Finally, running `python number_to_words.py`, `python all_wordifications.py`, or `python words_to_number.py` with or without the following number will also work, and again will prompt additional info as needed.
 
-Note that only the local number (final seven digits) will be wordified due to the significance of some area codes. Running all_wordifications will take some time due to dictionary size and the number of possible wordifications. 
+Note that only the local number (final seven digits) will be wordified due to the significance of some area codes. Running all_wordifications will take some time due to dictionary size and the number of possible wordifications. If given a short number, the functions will add zeroes to the front to keep consistent formatting.
 # Sources
 [NLTK](https://www.nltk.org)'s English language library

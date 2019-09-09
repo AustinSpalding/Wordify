@@ -10,6 +10,10 @@ def wordify(all_words=False, number=None):
 		print("Please input a telephone number to wordify")
 		number = input()
 	number = number.replace('-','')
+	if not number.isalnum():
+		return "Input contains non-alphanumeric digits"
+	while len(number) < 11:
+		number = '0' + number
 	prefix, suffix = number[:4], number[4:]
 	word_arr = []
 	word_arr += [keypad_map[n] for n in suffix]
@@ -21,11 +25,11 @@ def wordify(all_words=False, number=None):
 	while running:
 		found = False
 		for test in test_arr:
-			if (not found and not all_words) or all_words:
-				test_word = test[count:].lower()
-				if test_word in dictionary:
-					found = True
-					words_found[test_word.upper()] = test_word.upper()
+			test_word = test[count:].lower()
+			if test_word in dictionary:
+				found = True
+				words_found[test_word.upper()] = test_word.upper()
+				break
 		if not all_words and found:
 			running = False
 		else:
